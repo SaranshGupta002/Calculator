@@ -1,0 +1,37 @@
+function sum(a, b) {
+    return a + b;
+}
+
+function product(a, b) {
+    return a * b;
+}
+
+function difference(a, b) {
+    return a - b;
+}
+
+function division(a, b) {
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
+}
+
+var test = parseInt(prompt("Enter number of test cases:"));
+    for (var count = 0; count < test; count++) {
+        var a = parseInt(prompt("Enter the first number:"));
+        var b = parseInt(prompt("Enter the second number:"));
+        var op = prompt("Enter the operation (+, -, *, /):");
+
+        if (op === '+') {
+            console.log("The sum is ", sum(a, b));
+        } else if (op === '-') {
+            console.log("The difference is ", difference(a, b));
+        } else if (op === '*') {
+            console.log("The product is ", product(a, b));
+        } else if (op === '/') {
+            console.log("The division is ", division(a, b));
+        } else {
+            console.log("Wrong input for operation.");
+        }
+    }
